@@ -1,3 +1,4 @@
+#Parte 1: creacion de funcion para pasar de numeros de base 10 a numeros de base 2
 # También se podría hacer con bin, que es una función propia de python. 
 # Quedaría así: print(bin(int(input("Ingresá un número: ")))[2:])
 # Lo hacemos de ésta forma para mostrar el proceso que hay que hacer para pasar de decimal a binario
@@ -53,10 +54,11 @@ def decimalABinario(num, longitud=8):
             num = num // 2
     return binario
 
-#Parte 2: Operaciones Logicas 
+#Parte 2: Presentacion del Programa, entrada de usuario, Operaciones Logicas 
+print("Bienvenid@. Aqui puede ingresar dos numeros de base 10 (decimales) que usted desee, el programa los transformara a numeros de base 2 (binarios),y luego realiza la operacion logica seleccionada.")
 
-num1 = int(input("Por favor ingrese un número decimal: "))
-num2 = int(input("Por favor ingrese un número decimal: "))
+num1 = int(input("Por favor ingrese el primer número entero: "))
+num2 = int(input("Por favor ingrese el segundo número entero: "))
 
 #Imprime los binarios con la funcion decimalABinario
 
@@ -79,6 +81,6 @@ elif operacion == "OR":
 else: 
     resultado = num1 ^ num2 
     
-#Parte 3: Imprime el resultado de la operacion 
+#Parte 3: Imprime el resultado en pantalla
 print(f"Resultado en decimal: {resultado}")
 print(f"Resultado en binario: {decimalABinario(resultado)}")
